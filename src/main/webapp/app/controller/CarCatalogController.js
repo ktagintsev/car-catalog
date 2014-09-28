@@ -54,9 +54,7 @@ Ext.define('CarCatalog.controller.CarCatalogController', {
     onSaveCar: function (button) {
         var me = this;
         var carModel = Ext.create('CarCatalog.model.CarCatalogModel');
-        console.log(carModel);
         carModel.set(this.getAddCarFormView().down('form').getValues());
-        console.log(carModel);
         carModel.save({
             success: function (operation, response) {
                 var objAjax = operation.data;
